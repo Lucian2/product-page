@@ -1,0 +1,14 @@
+//  The _reset.scss file resets default browser styles,
+//  ensuring consistent rendering across different browsers
+//  by eliminating their predefined styles.
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}

@@ -1,0 +1,17 @@
+// Custom variables
+$primary: #ff7d1b;
+$secondary: #a9acb2;
+$light: #ffffff;
+$default_border-radius: 0.8rem;
+
+// Import the rest of the Bootstrap files
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+// Import reset
+@import 'reset';
+
+// Import mixins
+@import 'mixins';
+
+// Custom styles
+@import 'custom';

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fall Limited Edition Sneakers</title>
+    <meta
+      name="description"
+      content="Descoperă sneakersul Fall Limited Edition."
+    />
+    <!-- favicon -->
+    <link rel="icon" href="images/favicon-32x32.png" type="image/x-icon" />
+    <!-- Import Roboto Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Import Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Custom CSS -->
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="main-ctn container-lg">
+      <!-- Navbar Section -->
+      <nav class="navbar navbar-expand-lg my-3">
+        <div class="container-fluid px-md-3 flex-nowrap">
+          <!-- Right Side Menu -->
+          <div
+            class="right-side-menu d-flex justify-content-between align-items-center"
+          >
+            <!-- Toggler Button for Mobile Menu -->
+            <button
+              class="btn navbar-toggler border-0 ps-0 pt-2"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvas-menu"
+              aria-controls="offcanvas-menu"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Logo -->
+            <a class="navbar-brand" href="fall-limited-edition-sneakers.html">
+              <img
+                src="images/logo.svg"
+                alt="sneakers-logo"
+                class="img-fluid"
+              />
+            </a>
+            <div
+              class="collapse navbar-collapse mt-2"
+              id="navbarSupportedContent"
+            >
+              <!-- Desktop Menu Items -->
+              <ul
+                class="navbar-nav desktop-menu-list me-auto mb-2 mb-lg-0 gap-4 ms-5"
+              >
+                <!-- Menu Items be dynamically added here -->
+              </ul>
+            </div>
+          </div>
+          <!-- Left Side Menu -->
+          <div
+            class="left-side-menu d-flex justify-content-between align-items-center"
+          >
+            <!-- Cart Icon -->
+            <button
+              class="bg-transparent border-0 cart-icon position-relative me-3 me-lg-5"
+            >
+              <span
+                id="cart-total-quantity"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary d-none"
+              >
+              </span>
+              <img src="images/icon-cart.svg" alt="cart-icon" role="button" />
+            </button>
+            <!-- Cart Details Dropdown -->
+            <div
+              class="cart-details card position-absolute border-0 bg-light py-3"
+            >
+              <div class="card-header bg-light px-4">
+                <h6 class="card-title fw-bolder text-dark">Cart</h6>
+              </div>
+              <div id="empty-cart-message" class="text-center py-5">
+                <small class="fw-bold">Your cart is empty.</small>
+              </div>
+              <div class="card-products-ctn card-body px-4">
+                <!-- Cart Item -->
+                <div
+                  class="cart-product-details d-flex gap-2 justify-content-between align-items-center"
+                >
+                  <img
+                    width="50px"
+                    height="50px"
+                    alt="cart-product"
+                    class="rounded cart-product-image"
+                  />
+                  <div class="card-text d-flex flex-column m-0 overflow-hidden">
+                    <span
+                      class="cart-product-name overflow-hidden text-nowrap"
+                    ></span>
+                    <small class="cart-product-price"></small>
+                  </div>
+                  <i
+                    role="button"
+                    class="delete-product-btn fa-regular fa-trash-can text-secondary"
+                  ></i>
+                </div>
+                <!-- Checkout Button -->
+                <button
+                  class="checkout-btn btn btn-primary w-100 fw-bold mt-4 py-3"
+                >
+                  Checkout
+                </button>
+              </div>
+            </div>
+            <!-- Profile Avatar -->
+            <img
+              src="images/image-avatar.png"
+              class="img-fluid avatar"
+              alt="sneakers-profile-avatar"
+              role="button"
+            />
+          </div>
+        </div>
+      </nav>
+      <!-- Horizontal Line for Desktop -->
+      <hr class="mx-2 my-4 d-none d-md-block" />
+      <!-- Mobile Menu (Offcanvas) -->
+      <div
+        class="offcanvas offcanvas-start"
+        tabindex="-1"
+        id="offcanvas-menu"
+        aria-labelledby="offcanvas-menu-label"
+      >
+        <div class="offcanvas-header">
+          <!-- Close Button for Offcanvas Menu -->
+          <button
+            type="button"
+            class="btn btn-close text-reset m-0"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <!-- Mobile Menu Items -->
+          <ul class="navbar-nav mobile-menu-list">
+            <!-- Menu Items be dynamically added here -->
+          </ul>
+        </div>
+      </div>
+
+      <!-- Product Details Section -->
+      <div class="row px-sm-5 py-md-5 my-md-4">
+        <div class="col-12 col-md-6 image-gallery-col">
+          <!-- Product Image Gallery -->
+          <div
+            class="image-gallery-ctn default text-center mb-4 position-relative"
+            role="button"
+          >
+            <img id="main-image" class="w-100 h-100" />
+            <div
+              class="row mt-4 d-none d-md-flex"
+              id="gallery-thumbnails-section"
+            >
+              <!-- Thumbnails will be dynamically added here -->
+            </div>
+            <!-- Previous and Next Buttons for Mobile -->
+            <i
+              class="fa-solid fa-circle-chevron-left position-absolute d-block d-md-none text-light bg-dark"
+              id="gallery-prev-btn"
+              role="button"
+            ></i>
+            <i
+              class="fa-solid fa-circle-chevron-right position-absolute d-block d-md-none text-light bg-dark"
+              id="gallery-next-btn"
+              role="button"
+            ></i>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 pt-xl-5 pe-lg-5 product-details">
+          <!-- Product Company and Name -->
+          <p id="company" class="text-uppercase fw-bold mt-lg-4"></p>
+          <h1 id="product-name" class="text-dark fw-bolder"></h1>
+          <!-- Product Description -->
+          <p
+            id="product-description"
+            class="mt-lg-4 py-2"
+            style="text-align: justify"
+          ></p>
+          <!-- Product Price Section -->
+          <div class="price-section">
+            <!-- New Price and Discount Badge -->
+            <div class="new-price-ctn d-flex align-items-center gap-3">
+              <h4 id="product-new-price" class="fw-bold text-dark mb-0"></h4>
+              <h5 class="mb-0">
+                <span id="prodcut-discount" class="badge bg-dark"></span>
+              </h5>
+            </div>
+            <!-- Old Price -->
+            <p
+              id="product-old-price"
+              class="fw-bold mt-2 text-decoration-line-through"
+            ></p>
+          </div>
+          <!-- Quantity Control and Add to Cart Button -->
+          <div
+            class="product-btns-section d-flex gap-2 gap-lg-4 align-items-center mt-xl-5 pb-5"
+          >
+            <div class="quantity-control d-flex align-items-center">
+              <button id="decrease-quantity">
+                <i class="fas fa-minus text-primary"></i>
+              </button>
+              <span id="quantity" class="fw-bolder text-dark">0</span>
+              <button id="increase-quantity">
+                <i class="fas fa-plus text-primary"></i>
+              </button>
+            </div>
+            <button
+              id="add-to-cart"
+              class="fw-bold add-to-cart-btn btn btn-primary px-lg-5 py-2 rounded d-flex align-items-center justify-content-center"
+            >
+              <img
+                width="16px"
+                height="auto"
+                class="me-3 py-2"
+                src="images/icon-cart.svg"
+                alt="cart-icon"
+                role="button"
+              />
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- Modal for Image Gallery -->
+    <div
+      class="modal fade"
+      id="gallery-modal"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="gallery-modal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-transparent border-0">
+          <div class="modal-body">
+            <!-- Close Button in Modal -->
+            <div class="modal-close-btn-ctn d-flex justify-content-end">
+              <button
+                type="button"
+                class="btn btn-icon p-0 mb-3"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                <i class="fas fa-times text-light fs-4"></i>
+              </button>
+            </div>
+            <!-- Image Gallery in Modal -->
+            <div
+              class="image-gallery-ctn position-relative text-center mb-4"
+              role="button"
+            >
+              <img id="modal-main-image" class="w-100 h-100" />
+              <div id="modal-thumbnails-section" class="row mt-4 px-5">
+                <!-- Thumbnails will be dynamically added here -->
+              </div>
+              <!-- Previous and Next Buttons in Modal -->
+              <i
+                class="fa-solid fa-circle-chevron-left position-absolute text-light bg-dark"
+                id="modal-gallery-prev-btn"
+                role="button"
+              ></i>
+              <i
+                class="fa-solid fa-circle-chevron-right position-absolute text-light bg-dark"
+                id="modal-gallery-next-btn"
+                role="button"
+              ></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Load Bootstrap script for JavaScript functionalities -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Include the custom JavaScript file -->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

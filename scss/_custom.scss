@@ -1,0 +1,228 @@
+/* Set general styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #74797f;
+  .btn {
+    border-radius: $default_border-radius;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  hr {
+    border-width: 2px;
+  }
+  .main-ctn {
+    @media screen and (min-width: 1700px) {
+      max-width: 80%; /* Set maximum width for large screens */
+    }
+  }
+}
+
+/* Style the desktop menu list */
+.desktop-menu-list {
+  li {
+    transition: all 0.2s ease-in-out;
+    a {
+      font-weight: 400;
+    }
+    &.active {
+      text-decoration: underline;
+      text-decoration-color: $primary;
+      text-decoration-thickness: 4px;
+      text-underline-offset: 3rem;
+      z-index: 2;
+      a {
+        color: #000000;
+      }
+    }
+  }
+}
+
+/* Style the left side menu */
+.left-side-menu {
+  .cart-icon {
+    &.active,
+    &:hover {
+      img {
+        filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg)
+          brightness(0%) contrast(100%);
+      }
+    }
+  }
+  .cart-details {
+    display: none;
+    z-index: 2;
+    width: 21rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    right: -42%;
+    top: 120%;
+    border-radius: $default_border-radius;
+    color: inherit;
+    .card-text {
+      span {
+        text-overflow: ellipsis;
+      }
+    }
+    .card-products-ctn {
+      display: none;
+    }
+    small {
+      letter-spacing: 1px;
+    }
+    @media screen and (max-width: 1022px) {
+      right: 0%;
+    }
+    @media screen and (max-width: 450px) {
+      left: 50%;
+      top: 150%;
+      transform: translateX(-50%);
+      max-width: 100%;
+    }
+  }
+  .avatar {
+    width: 3.43rem;
+    height: 3.43rem;
+    &.active {
+      border: 3px solid $primary;
+      border-radius: 50%;
+    }
+    @media screen and (max-width: 600px) {
+      width: 2.2rem;
+      height: 2.2rem;
+    }
+  }
+
+  @media screen and (min-width: 550px) {
+    position: relative;
+  }
+}
+
+/* Style the offcanvas(mobile) menu */
+#offcanvas-menu {
+  max-width: 15.67rem;
+  .nav-link {
+    font-size: 1.2rem;
+  }
+}
+
+/* Style the image gallery*/
+.image-gallery-col {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+}
+
+.image-gallery-ctn {
+  .thumbnail-ctn {
+    border-radius: calc($default_border-radius + 0.1rem);
+    &.active {
+      .overlay {
+        border-radius: inherit;
+        border: 3px solid $primary;
+        background-color: rgba(255, 255, 255, 0.6);
+      }
+    }
+    &:hover {
+      img {
+        opacity: 0.5;
+      }
+    }
+  }
+  #gallery-prev-btn,
+  #gallery-next-btn {
+    @include gallery-navigation-button;
+    top: 50%;
+    transform: translateY(-50%);
+    &.fa-circle-chevron-right {
+      right: 5%;
+    }
+    &.fa-circle-chevron-left {
+      left: 5%;
+    }
+  }
+  &.default {
+    @media screen and (min-width: 550px) {
+      width: 85%;
+    }
+  }
+  @media screen and (min-width: 550px) {
+    img {
+      border-radius: $default_border-radius;
+    }
+  }
+}
+
+/* Style the modal gallery navigation buttons */
+#modal-gallery-prev-btn,
+#modal-gallery-next-btn {
+  @include gallery-navigation-button;
+  top: 35%;
+  &.fa-circle-chevron-right {
+    right: -4%;
+  }
+  &.fa-circle-chevron-left {
+    left: -4%;
+  }
+}
+
+/* Style the product details section */
+.product-details {
+  .quantity-control {
+    button,
+    span {
+      background-color: #f7f8fd;
+      border: none;
+      padding: 0.62rem 0.93rem;
+      font-size: 1.2em;
+    }
+    i {
+      font-size: 0.9rem;
+    }
+    button {
+      &:hover {
+        opacity: 0.5;
+      }
+      &:nth-child(1) {
+        border-top-left-radius: $default_border-radius;
+        border-bottom-left-radius: $default_border-radius;
+      }
+      &:last-child {
+        border-top-right-radius: $default_border-radius;
+        border-bottom-right-radius: $default_border-radius;
+      }
+    }
+  }
+  #add-to-cart {
+    img {
+      filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%)
+        contrast(100%);
+    }
+  }
+  #company {
+    letter-spacing: 1px;
+  }
+
+  @media screen and (min-width: 550px) and (max-width: 767px) {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+  @media screen and (max-width: 550px) {
+    .product-btns-section {
+      flex-direction: column;
+      & > * {
+        width: 100%;
+      }
+      #quantity {
+        text-align: center;
+        flex: 1;
+      }
+    }
+    .price-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+  }
+}
