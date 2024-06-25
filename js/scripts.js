@@ -215,6 +215,7 @@ $(document).ready(function () {
             // Handle thumbnail click event
             thumbnailCtn.find('.thumbnail-ctn').click(function () {
                 mainImage.attr('src', $(this).find('.thumbnail').attr('data-large-src'));
+                carouselCurrentIndex = index
 
                 thumbnailsContainer.find('.thumbnail-ctn').removeClass('active');
                 $(this).addClass('active');
